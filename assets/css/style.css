@@ -1,0 +1,728 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Tiro+Devanagari+Marathi:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+:root {
+  --background: #fff5f8;
+  --cream: #fff;
+  --pink-soft: #fff0f6;
+  --rose: #e11d6f;
+  --rose-deep: #99224f;
+  --sage-deep: #b82f6b;
+  --gold: #d85a91;
+  --gold-soft: #f2adc9;
+  --ink: #421929;
+  --shadow-elegant: 0 20px 60px -20px rgba(139, 40, 82, 0.25);
+  --shadow-soft: 0 8px 30px -10px rgba(80, 35, 55, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: "Hind", sans-serif;
+}
+
+img, iframe, canvas, svg {
+  display: block;
+}
+
+button, a {
+  font: inherit;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  width: min(100%, 1152px);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.narrow {
+  max-width: 760px;
+}
+
+.cover-screen {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  background: #fdf2f8;
+}
+
+.cover-flower {
+  position: absolute;
+  font-size: 32px;
+  opacity: 0.72;
+  animation: drift 7s ease-in-out infinite;
+}
+
+.cover-flower-left {
+  top: 24px;
+  left: 24px;
+}
+
+.cover-flower-right {
+  bottom: 32px;
+  left: 40px;
+  animation-delay: 2s;
+}
+
+.envelope-button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  position: relative;
+  transition: transform 0.5s ease;
+  perspective: 1000px;
+}
+
+.envelope-button:hover {
+  transform: scale(1.05);
+}
+
+.envelope-button.opening {
+  animation: envelope-open 0.9s ease both;
+}
+
+.envelope-img {
+  width: min(420px, 82vw);
+  height: auto;
+  filter: drop-shadow(0 24px 24px rgba(80, 20, 45, 0.24));
+}
+
+.monogram-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monogram {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 8px rgba(70, 20, 40, 0.25));
+}
+
+.cover-copy {
+  margin-top: 40px;
+  text-align: center;
+  animation: fade-up 0.8s ease both;
+}
+
+.cover-copy h1 {
+  margin: 0;
+  font-family: "Tiro Devanagari Marathi", serif;
+  font-size: clamp(44px, 8vw, 60px);
+  color: var(--sage-deep);
+  font-weight: 400;
+}
+
+.cover-copy p {
+  margin: 8px 0 0;
+  color: rgba(184, 47, 107, 0.82);
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.site {
+  animation: fade-in 0.7s ease both;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent 52%, #fff);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px 48px;
+}
+
+.prayers {
+  color: var(--rose-deep);
+  font-style: italic;
+  font-size: 12px;
+}
+
+.prayers p {
+  margin: 8px 0 0;
+}
+
+.intro {
+  max-width: 480px;
+  margin: 28px 0 0;
+  color: var(--rose-deep);
+  font-size: clamp(17px, 2vw, 21px);
+}
+
+.parents {
+  margin: 0;
+  color: rgba(66, 25, 41, 0.82);
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 700;
+}
+
+.couple-name {
+  margin: 20px 0 0;
+  font-family: "Tiro Devanagari Marathi", serif;
+  font-size: 62px;
+  line-height: 0.9;
+  font-weight: 400;
+  color: var(--rose);
+}
+
+.lineage {
+  margin: 12px 0 0;
+  color: rgba(66, 25, 41, 0.82);
+  font-size: clamp(15px, 1.7vw, 18px);
+}
+
+.with {
+  margin: 20px 0 0;
+  font-family: "Tiro Devanagari Marathi", serif;
+  font-size: clamp(34px, 6vw, 48px);
+  color: var(--rose-deep);
+  font-style: italic;
+}
+
+.section {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.section-white {
+  background: var(--cream);
+}
+
+.section-pink {
+  background: var(--pink-soft);
+}
+
+.section-title {
+  margin: 0;
+  font-family: "Tiro Devanagari Marathi", serif;
+  font-weight: 400;
+  color: var(--rose-deep);
+  font-size: clamp(58px, 9vw, 76px);
+}
+
+.section-title.small {
+  font-size: clamp(44px, 7vw, 52px);
+}
+
+.divider, .footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0;
+  color: var(--gold);
+}
+
+.divider span, .footer-divider span {
+  width: 64px;
+  height: 1px;
+  background: var(--gold-soft);
+}
+
+.scratch-card {
+  position: relative;
+  height: 128px;
+  max-width: 448px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+  border: 2px solid var(--gold-soft);
+  border-radius: 16px;
+  box-shadow: var(--shadow-elegant);
+  user-select: none;
+}
+
+.scratch-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream);
+}
+
+.scratch-content p {
+  margin: 0;
+  letter-spacing: 0.35em;
+  color: var(--sage-deep);
+  font-size: 16px;
+}
+
+.scratch-content h2 {
+  margin: 4px 0 0;
+  font-family: "Tiro Devanagari Marathi", serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--rose-deep);
+}
+
+#scratchCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 24px);
+  animation: fade-up 0.7s ease both;
+}
+
+.countdown div {
+  min-width: clamp(68px, 15vw, 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown strong {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  border: 1px solid var(--gold-soft);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cinzel", serif;
+  font-size: clamp(25px, 6vw, 38px);
+  color: var(--rose-deep);
+  background: var(--cream);
+}
+
+.countdown span {
+  margin-top: 8px;
+  font-family: "Cinzel", serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.event-card {
+  position: relative;
+  min-height: 440px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--gold-soft);
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elegant);
+}
+
+.event-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.event-body {
+  position: relative;
+  min-height: 440px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.event-body h3 {
+  margin: 0;
+  font-family: "Tiro Devanagari Marathi", serif;
+  font-size: clamp(48px, 7vw, 62px);
+  font-weight: 400;
+}
+
+.event-body p {
+  margin: 8px auto 0;
+  max-width: 400px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+  font-style: italic;
+}
+
+.mini-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: var(--gold);
+}
+
+.mini-divider span {
+  width: 40px;
+  height: 1px;
+  background: rgba(242, 173, 201, 0.75);
+}
+
+.mini-divider.dark span {
+  background: var(--gold-soft);
+}
+
+.event-body dl {
+  margin: 0;
+}
+
+.event-body dt {
+  margin-top: 12px;
+  color: var(--gold-soft);
+  font-size: 14px;
+}
+
+.event-body dd {
+  margin: 4px 0 0;
+  font-size: 20px;
+}
+
+.quote {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 1.55;
+  font-style: italic;
+  color: rgba(66, 25, 41, 0.82);
+  font-family: "Noto Serif Devanagari", serif;
+}
+
+.quote.compact {
+  font-size: 21px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: "Cinzel", serif;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  color: var(--sage-deep);
+}
+
+.family-card {
+  max-width: 660px;
+  margin: 32px auto 0;
+  padding: 32px;
+  border: 1px solid var(--gold-soft);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow-soft);
+}
+
+.family-card h3 {
+  margin: 0;
+  font-family: "Tiro Devanagari Marathi", serif;
+  font-size: 30px;
+  letter-spacing: 0.12em;
+  color: var(--sage-deep);
+}
+
+.family-card p {
+  margin: 4px 0;
+  font-size: 23px;
+}
+
+.venue-name {
+  margin: 0;
+  font-size: 24px;
+  color: rgba(66, 25, 41, 0.82);
+}
+
+.map-container {
+  max-width: 900px;
+}
+
+.map-frame {
+  margin-top: 40px;
+  height: 360px;
+  border: 1px solid var(--gold-soft);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-elegant);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.direction-btn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ec76a8, #d21d69);
+  box-shadow: 0 10px 40px -10px rgba(216, 70, 130, 0.42);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.direction-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.footer {
+  padding: 64px 24px;
+  background: var(--ink);
+  color: #fff;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer > p:first-child {
+  font-family: "Cinzel", serif;
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  color: var(--gold-soft);
+}
+
+.footer h2 {
+  margin: 12px 0 0;
+  font-family: "Tiro Devanagari Marathi", serif;
+  font-size: clamp(54px, 8vw, 72px);
+  font-weight: 400;
+}
+
+.footer-divider span {
+  width: 48px;
+  background: rgba(242, 173, 201, 0.45);
+}
+
+.footer-date {
+  font-size: 21px;
+  font-style: italic;
+}
+
+.hashtag {
+  margin-top: 12px !important;
+  font-family: "Cinzel", serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section-decor::before,
+.section-decor::after {
+  position: absolute;
+  opacity: 0.2;
+  font-size: 36px;
+  pointer-events: none;
+}
+
+.section-decor::before {
+  content: "🌿";
+  top: 24px;
+  left: 16px;
+}
+
+.section-decor::after {
+  content: "🌸";
+  top: 48px;
+  right: 24px;
+}
+
+.petals {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -10vh;
+  animation: float-petal linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(66, 25, 41, 0.12));
+}
+
+.butterfly {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  pointer-events: none;
+  animation: butterfly-fly 18s linear infinite;
+}
+
+.butterfly span {
+  display: inline-block;
+  animation: butterfly-flap 0.25s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.music-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(66, 25, 41, 0.84);
+  color: #fff;
+  box-shadow: var(--shadow-elegant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.music-toggle:hover {
+  transform: scale(1.06);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-18px) rotate(8deg); }
+}
+
+@keyframes envelope-open {
+  0% { transform: scale(1) rotateX(0); opacity: 1; }
+  60% { transform: scale(1.08) rotateX(-12deg); opacity: 0.9; }
+  100% { transform: scale(1.18) translateY(-24px); opacity: 0; }
+}
+
+@keyframes float-petal {
+  0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.85; }
+  100% { transform: translate3d(26px, 115vh, 0) rotate(360deg); opacity: 0; }
+}
+
+@keyframes butterfly-fly {
+  0% { transform: translate(-10vw, 60vh) rotate(-8deg) scale(1); }
+  20% { transform: translate(20vw, 35vh) rotate(6deg) scale(1.05); }
+  40% { transform: translate(45vw, 55vh) rotate(-4deg) scale(0.95); }
+  60% { transform: translate(65vw, 25vh) rotate(8deg) scale(1.1); }
+  80% { transform: translate(85vw, 45vh) rotate(-6deg) scale(1); }
+  100% { transform: translate(110vw, 30vh) rotate(4deg) scale(1); }
+}
+
+@keyframes butterfly-flap {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.55); }
+}
+
+@media (max-width: 900px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card,
+  .event-body {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-content {
+    padding-top: 32px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .scratch-content h2 {
+    font-size: 34px;
+  }
+
+  .events-grid {
+    gap: 24px;
+  }
+
+  .event-body {
+    padding: 24px;
+  }
+
+  .map-frame {
+    height: 320px;
+  }
+}
+
+sup{
+  font-size: 18px;
+}

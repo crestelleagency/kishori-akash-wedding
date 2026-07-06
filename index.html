@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>किशोरी आणि आकाश - विवाह आमंत्रण</title>
+    <meta name="description" content="किशोरी आणि आकाश - विवाह आमंत्रण">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="petals" aria-hidden="true"></div>
+    <section id="cover" class="cover-screen">
+        <span class="cover-flower cover-flower-left">🪷</span>
+        <span class="cover-flower cover-flower-right">🌿</span>
+        <button id="openInvitation" class="envelope-button" type="button" aria-label="आमंत्रण उघडा">
+            <img src="assets/images/envelop.png" alt="विवाह आमंत्रणाचा लिफाफा" class="envelope-img">
+            <span class="monogram-wrap">
+                <img src="assets/images/logo1.png" alt="K आणि P चा मोनोग्राम" class="monogram">
+            </span>
+        </button>
+        <div class="cover-copy">
+            <h1>आपणांस सस्नेह आमंत्रण</h1>
+            <p>आपले आमंत्रण उघडण्यासाठी लिफाफ्यावर स्पर्श करा</p>
+        </div>
+    </section>
+
+    <main id="invitation" class="site hidden">
+        <button id="musicToggle" class="music-toggle" type="button" aria-label="पार्श्वभूमी संगीत बंद करा">♪</button>
+        <audio id="bgMusic" src="assets/audio/videoplayback.weba" preload="auto" loop></audio>
+
+        <section class="hero">
+            <img src="assets/images/mainbg.png" alt="किशोरी आणि आकाश यांच्या विवाहाचे चित्र" class="hero-bg">
+            <div class="hero-shade"></div>
+            <div class="hero-content">
+                <div class="prayers">
+                    <p>॥ श्री गणेशाय नमः ॥ &nbsp; ॥ श्री जोतिबाय नमः ॥</p>
+                    <!-- <p>‖ Shri Sadhgurubhay Namah ‖ &nbsp; ‖ Shri Mahaveeraiya Namah ‖ ‖</p>
+            <p>‖ Jai Jinendra ‖</p> -->
+                </div>
+
+                <p class="intro">ईश्वराच्या कृपेने आणि ज्येष्ठांच्या आशीर्वादाने,</p>
+                <p class="intro">आपल्या कन्येच्या शुभ विवाह सोहळ्यास आपल्या मान्यवर उपस्थितीची विनम्र विनंती करीत आहेत.
+                </p>
+
+                <h2 class="couple-name"> <sup>चि. सौ. कां.</sup> किशोरी</h2>
+                <p class="lineage">(कै. हरिभाऊ दाजी शिंदे यांची नात व
+                    श्री. भगवान हरिभाऊ शिंदे
+                    रा. भुषणगड, ता. खटाव, जि. सातारा यांची द्वितीय कन्या.)</p>
+                <p class="with">सोबत</p>
+                <h2 class="couple-name"><sup>चि.</sup> आकाश</h2>
+                <p class="lineage">(कै. रामचंद्र कृष्णा नाईक-इनामदार यांचे नातू व
+                    श्री. उत्तम रामचंद्र नाईक-इनामदार
+                    रा. अंबवडे, ता. खटाव, जि. सातारा. यांचे चिरंजीव.)</p>
+            </div>
+        </section>
+
+        <section class="section section-white date-section">
+            <div class="section-decor" aria-hidden="true"></div>
+            <div class="container narrow center">
+                <div class="divider"><span></span><b>❀</b><span></span></div>
+                <div class="scratch-card">
+                    <div class="scratch-content">
+                        <p>दिनांक लक्षात ठेवा</p>
+                        <h2>२६ जुलै २०२६</h2>
+                    </div>
+                    <canvas id="scratchCanvas" aria-label="Scratch to reveal wedding date"></canvas>
+                </div>
+                <div id="countdown" class="countdown hidden">
+                    <div><strong id="days">00</strong><span>Days</span></div>
+                    <div><strong id="hours">00</strong><span>Hours</span></div>
+                    <div><strong id="minutes">00</strong><span>Minutes</span></div>
+                    <div><strong id="seconds">00</strong><span>Seconds</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-pink">
+            <div class="section-decor" aria-hidden="true"></div>
+            <div class="container">
+                <div class="center">
+                    <h2 class="section-title">कार्यक्रमाचे वेळापत्रक</h2>
+                    <div class="divider"><span></span><b>❀</b><span></span></div>
+                </div>
+                <div class="events-grid">
+                    <article class="event-card" style="background-image: url('assets/images/engagement.png')">
+                        <div class="event-overlay"></div>
+                        <div class="event-body">
+                            <h3>साखरपुडा समारंभ</h3>
+                            <p>दोन कुटुंबांच्या नव्या नात्याचा शुभारंभ.</p>
+                            <div class="mini-divider"><span></span>❀<span></span></div>
+                            <dl>
+                                <dt>दिनांक</dt>
+                                <dd>रविवार · २६ जून २०२६ </dd>
+                                <dt>वेळ</dt>
+                                <dd>दुपारी 11:00 वाजता</dd>
+                                <dt>स्थळ</dt>
+                                <dd>(विवाहस्थळी)</dd>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="event-card" style="background-image: url('assets/images/haldi.png')">
+                        <div class="event-overlay"></div>
+                        <div class="event-body">
+                            <h3>हळदी समारंभ</h3>
+                            <p>हळदीच्या मंगल रंगात आनंदाचा उत्सव.</p>
+                            <div class="mini-divider"><span></span>❀<span></span></div>
+                            <dl>
+                                <dt>दिनांक</dt>
+                                <dd>रविवार · २६ जून २०२६ </dd>
+                                <dt>वेळ</dt>
+                                <dd>दुपारी १२.३० वाजता</dd>
+                                <dt>स्थळ</dt>
+                                <dd>(विवाहस्थळी)</dd>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="event-card" style="background-image: url('assets/images/wedding.png')">
+                        <div class="event-overlay"></div>
+                        <div class="event-body">
+                            <h3>विवाह सोहळा</h3>
+                            <p>दोन जीवांचे पवित्र बंधन, नवजीवनाची सुरुवात</p>
+                            <div class="mini-divider"><span></span>❀<span></span></div>
+                            <dl>
+                                <dt>दिनांक</dt>
+                                <dd>रविवार · २६ जून २०२६ </dd>
+                                <dt>वेळ</dt>
+                                <dd>सायंकाळी ०४ वाजून ५१ मिनिटांनी </dd>
+                                <dt>स्थळ</dt>
+                                <dd>महालक्ष्मी मल्टीपर्पज हॉल,
+                                    (कराड-मायणी रोड), म्हासुर्णे, ता. खटाव,
+                                    जि. सातारा.</dd>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="event-card" style="background-image: url('assets/images/phere.png')">
+                        <div class="event-overlay"></div>
+                        <div class="event-body">
+                            <h3>सप्तपदी</h3>
+                            <p>पवित्र अग्नीच्या साक्षीने सात जन्मांच्या वचनांचा सोहळा.</p>
+                            <div class="mini-divider"><span></span>❀<span></span></div>
+                            <dl>
+                                <dt>दिनांक</dt>
+                                <dd>रविवार · २६ जून २०२६ </dd>
+                                <dt>वेळ</dt>
+                                <dd>सायंकाळी ०५ वाजून 0५ मिनिटांनी</dd>
+                                <dt>स्थळ</dt>
+                                <dd>(विवाहस्थळी)</dd>
+                            </dl>
+                        </div>
+                    </article>
+                    <!-- <article class="event-card" style="background-image: url('assets/images/recept.jpg')">
+                        <div class="event-overlay"></div>
+                        <div class="event-body">
+                            <h3>स्वागत समारंभ</h3>
+                            <p>प्रिय आप्तस्वकीयांसोबत आमच्या नवजीवनाचा आनंद साजरा करण्याचा सोहळा</p>
+                            <div class="mini-divider"><span></span>❀<span></span></div>
+                            <dl>
+                                <dt>दिनांक</dt>
+                                <dd>रविवार · 26 जून २०२६ </dd>
+                                <dt>वेळ</dt>
+                                <dd>सायंकाळी 07:00 पासून</dd>
+                                <dt>स्थळ</dt>
+                                <dd>Veerdency Luxury Resort</dd>
+                            </dl>
+                        </div>
+                    </article> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-white center">
+            <div class="section-decor" aria-hidden="true"></div>
+            <div class="container narrow">
+                <h2 class="section-title small">आपल्या शुभ उपस्थितीची आम्ही आतुरतेने वाट पाहत आहोत</h2>
+                <div class="divider"><span></span><b>❀</b><span></span></div>
+                <p class="quote">दोन जीवांच्या या मंगल मिलनाचा आनंद आपल्या उपस्थितीनेच पूर्ण होईल.</p>
+            </div>
+        </section>
+
+        <section class="section section-pink center">
+            <div class="section-decor" aria-hidden="true"></div>
+            <div class="container narrow">
+                <p class="eyebrow">सप्रेम</p>
+                <h2 class="section-title small">शिंदे परिवार</h2>
+                <div class="divider"><span></span><b>❀</b><span></span></div>
+                <p class="quote compact">आपल्या शुभ आगमनाच्या प्रतीक्षेत...</p>
+                <div class="family-card">
+                    <h3>शिंदे</h3>
+                    <div class="mini-divider dark"><span></span>❀<span></span></div>
+                    <p>गणेश, अविनाश, सागर, वैभव, ऋषिकेश, श्रीधर, चेतन
+                        आणि कुटुंब</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-white center">
+            <div class="section-decor" aria-hidden="true"></div>
+            <div class="container map-container">
+                <p class="eyebrow">स्थळ</p>
+                <h2 class="section-title small">सोहळ्याचे ठिकाण</h2>
+                <div class="divider"><span></span><b>❀</b><span></span></div>
+                <p class="venue-name">महालक्ष्मी मल्टीपर्पज हॉल,
+                    (कराड-मायणी रोड), म्हासुर्णे, ता. खटाव,
+                    जि. सातारा.</p>
+                <div class="map-frame">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487333.30082259077!2d73.55836348906251!3d17.3977972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc163dcb3b26b31%3A0xb2d0d19721123701!2zTWFoYWxheG1pIE11bHRpcHVycG9zZSBMYXducyDgpK7gpILgpJfgpLIg4KSV4KS-4KSw4KWN4KSv4KS-4KSy!5e0!3m2!1sen!2sin!4v1783334667776!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+                <a class="direction-btn" href="https://maps.app.goo.gl/fRk5eDFmQtLed5XU9" target="_blank"
+                    rel="noreferrer">मार्गदर्शन पहा</a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>सप्रेम</p>
+            <h2>किशोरी आणि आकाश</h2>
+            <div class="footer-divider"><span></span><b>💐</b><span></span></div>
+            <p class="footer-date">२६ जून २०२६ </p>
+            <p class="hashtag">#किशोरीआक्षयविवाह</p>
+        </footer>
+    </main>
+
+    <div id="butterfly" class="butterfly hidden" aria-hidden="true">
+        <span>
+            <svg width="38" height="32" viewBox="0 0 64 52" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="32" cy="26" rx="1.6" ry="11" fill="#1f2937"></ellipse>
+                <circle cx="32" cy="14" r="2.2" fill="#1f2937"></circle>
+                <path d="M32 13 C 29 8, 27 6, 25 5" stroke="#1f2937" stroke-width="1" fill="none"
+                    stroke-linecap="round"></path>
+                <path d="M32 13 C 35 8, 37 6, 39 5" stroke="#1f2937" stroke-width="1" fill="none"
+                    stroke-linecap="round"></path>
+                <path d="M30 22 C 10 10, 2 22, 6 32 C 10 42, 24 38, 30 30 Z" fill="#3b82f6" opacity="0.95"></path>
+                <path d="M30 30 C 18 38, 10 44, 14 48 C 20 50, 28 42, 30 36 Z" fill="#60a5fa" opacity="0.95"></path>
+                <path d="M34 22 C 54 10, 62 22, 58 32 C 54 42, 40 38, 34 30 Z" fill="#3b82f6" opacity="0.95"></path>
+                <path d="M34 30 C 46 38, 54 44, 50 48 C 44 50, 36 42, 34 36 Z" fill="#60a5fa" opacity="0.95"></path>
+                <circle cx="14" cy="26" r="1.6" fill="#fff" opacity="0.85"></circle>
+                <circle cx="50" cy="26" r="1.6" fill="#fff" opacity="0.85"></circle>
+            </svg>
+        </span>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
